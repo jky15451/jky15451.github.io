@@ -5,39 +5,39 @@
     <meta charset="UTF-8">
     <title>최종정답</title>
     <style>
-      /* 네비게이션 바 스타일 */
+     
       nav {
-        background-color: #333; /* 배경색 */
-        overflow: hidden; /* 오버플로우 설정 */
-        display: flex; /* Flexbox 사용 */
-        justify-content: flex-start; /* 왼쪽 정렬 */
+        background-color: #333; 
+        overflow: hidden; 
+        display: flex;
+        justify-content: flex-start; 
       }
       
-      /* 링크 스타일 */
+     
       nav a {
-        display: block; /* 블록 요소로 설정 */
-        color: white; /* 글자색 */
-        text-align: center; /* 가운데 정렬 */
-        padding: 14px 16px; /* 패딩 설정 */
-        text-decoration: none; /* 밑줄 제거 */
-        font-size: 17px; /* 글자 크기 */
+        display: block; 
+        color: white;
+        text-align: center; 
+        padding: 14px 16px;
+        text-decoration: none; 
+        font-size: 17px; 
       }
       
-      /* 홈 링크 스타일 */
+      
       nav a.active {
         margin-right: 40%;
       }
       
-      /* 마우스 호버시 스타일 */
+     
       nav a:hover {
-        background-color: #ddd; /* 배경색 변경 */
-        color: black; /* 글자색 변경 */
+        background-color: #ddd; 
+        color: black; 
       }
       
-      /* 활성화된 링크 스타일 */
+     
       .active {
-        background-color: #4CAF50; /* 배경색 */
-        color: white; /* 글자색 */
+        background-color: #4CAF50;
+        color: white; 
       }
     </style>
   </head>
@@ -55,18 +55,18 @@
     
     <script>
       function checkAnswer() {
-        // 정답을 여기에 입력합니다.
+        
         var correctAnswer =8;
         
-        // 사용자가 입력한 답을 가져옵니다.
+       
         var userAnswer = document.getElementById("answer").value;
         
-        // 입력한 답이 정답과 일치하는지 확인합니다.
+       
         if (userAnswer == correctAnswer) {
-          // 정답이 맞으면 다음 페이지로 이동합니다.
+        
           window.location.href = "gift.html";
         } else {
-          // 정답이 틀리면 경고 메시지를 표시합니다.
+          
           alert("정답이 아닙니다. 다시 시도해보세요.");
         }
       }
