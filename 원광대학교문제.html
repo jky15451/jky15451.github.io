@@ -76,28 +76,30 @@
     
    <script>
       function checkAnswer(problemNumber) {
-     
+       
         var correctAnswers = [
-          ["창의공과대학","창의공과대학교","창의공과대"],
-          ["인터넷프로그래밍"],
-          ["박광진","박광진 교수님"]
+          ["사과"],
+          ["바나나"],
+          ["파인애플"]
         ];
         
- 
+        
         var userAnswer = document.getElementById("answer" + problemNumber).value;
         var correctAnswer = correctAnswers[problemNumber-1];
-  
+        
+      
         if (correctAnswer.includes(userAnswer)) {
+         
           document.getElementById("result" + problemNumber).innerHTML = "정답입니다!";
         } else {
-        
+         
           document.getElementById("result" + problemNumber).innerHTML = "틀렸습니다. 다시 시도해보세요.";
         }
         
-        
+       
         if (document.getElementById("result1").innerHTML === "정답입니다!" && document.getElementById("result2").innerHTML === "정답입니다!"&& document.getElementById("result3").innerHTML === "정답입니다!") {
-     
-          alert("★=1")
+         
+          alert("◆=2")
         }
       }
     </script>
