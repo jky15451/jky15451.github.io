@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <meta charset="UTF-8">
+    <title>노래문제</title>
+    <style>
+      /* 네비게이션 바 스타일 */
+      nav {
+        background-color: #333; /* 배경색 */
+        overflow: hidden; /* 오버플로우 설정 */
+        display: flex; /* Flexbox 사용 */
+        justify-content: flex-start; /* 왼쪽 정렬 */
+      }
+      
+      /* 링크 스타일 */
+      nav a {
+        display: block; /* 블록 요소로 설정 */
+        color: white; /* 글자색 */
+        text-align: center; /* 가운데 정렬 */
+        padding: 14px 16px; /* 패딩 설정 */
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 17px; /* 글자 크기 */
+      }
+      
+      /* 홈 링크 스타일 */
+      nav a.active {
+        margin-right: 40%;
+      }
+      
+      /* 마우스 호버시 스타일 */
+      nav a:hover {
+        background-color: #ddd; /* 배경색 변경 */
+        color: black; /* 글자색 변경 */
+      }
+      
+      /* 활성화된 링크 스타일 */
+      .active {
+        background-color: #4CAF50; /* 배경색 */
+        color: white; /* 글자색 */
+      }
+    </style>
+  </head>
+  <body align=center>
+    <nav>
+      <a class="active" href="과제.html">홈</a>
+      <a href="원광대학교문제.html">CHAP.1</a>
+      <a href="CHAP_2.html">CHAP.2</a>
+      <a href="CHAP_3.html">CHAP.3</a>
+    </nav>
+  <div id="problem1">
+      <h1>노래 제목을 적어주세요 </h1>
+ <div align=center><audio src="비발디.mp3" controls></audio></div>
+      <input id="answer1" type="text">
+      <button onclick="checkAnswer(1)">제출</button>
+      <p id="result1"></p>
+    </div>
+    
+    <div id="problem2">
+     
+      <div align=center><audio src="겨울.mp3" controls></audio></div>
+      <input id="answer2" type="text">
+      <button onclick="checkAnswer(2)">제출</button>
+      <p id="result2"></p>
+    </div>
+ <div id="problem3">
+     
+      <div align=center><audio src="왕벌의비행.mp3" controls></audio></div>
+      <input id="answer3" type="text">
+      <button onclick="checkAnswer(3)">제출</button>
+      <p id="result3"></p>
+    </div>
+    
+    <script>
+      function checkAnswer(problemNumber) {
+        // 각 문제에 대한 정답 목록을 만듭니다.
+        var correctAnswers = [
+          ["여름","비발디 여름","사계 여름"],
+          ["비발디 겨울","겨울","사계 겨울"],
+          ["왕벌의비행"]
+        ];
+        
+        // 문제 번호에 따라 입력한 답과 정답 목록을 가져옵니다.
+        var userAnswer = document.getElementById("answer" + problemNumber).value;
+        var correctAnswer = correctAnswers[problemNumber-1];
+        
+        // 입력한 답이 정답 목록에 있는지 확인합니다.
+        if (correctAnswer.includes(userAnswer)) {
+          // 정답이 맞으면 "정답입니다!" 메시지를 표시합니다.
+          document.getElementById("result" + problemNumber).innerHTML = "정답입니다!";
+        } else {
+          // 정답이 틀리면 "틀렸습니다. 다시 시도해보세요." 메시지를 표시합니다.
+          document.getElementById("result" + problemNumber).innerHTML = "틀렸습니다. 다시 시도해보세요.";
+        }
+        
+        // 모든 문제의 정답을 맞췄는지 확인합니다.
+        if (document.getElementById("result1").innerHTML === "정답입니다!" && document.getElementById("result2").innerHTML === "정답입니다!"&& document.getElementById("result3").innerHTML === "정답입니다!") {
+          // 모든 문제의 정답을 맞췄으면 "다음 페이지로 이동합니다." 메시지를 표시하고, 페이지를 이동합니다.
+          alert("♣=3")
+        }
+      }
+    </script>
+  </body>
+</html>
