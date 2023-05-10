@@ -73,7 +73,7 @@
     
     <script>
       function checkAnswer(problemNumber) {
-        // 각 문제에 대한 정답 목록을 만듭니다.
+        // 각 문제에 대한 정답 입력 
         var correctAnswers = [
           ["사과"],
           ["바나나"],
@@ -89,13 +89,13 @@
           // 정답이 맞으면 "정답입니다!" 메시지를 표시합니다.
           document.getElementById("result" + problemNumber).innerHTML = "정답입니다!";
         } else {
-          // 정답이 틀리면 "틀렸습니다. 다시 시도해보세요." 메시지를 표시합니다.
+          // 정답이 틀리면 "틀렸습니다." 라는 메시지 표시
           document.getElementById("result" + problemNumber).innerHTML = "틀렸습니다. 다시 시도해보세요.";
         }
         
-        // 모든 문제의 정답을 맞췄는지 확인합니다.
+        // 모든 문제의 정답을 맞췄는지 확인
         if (document.getElementById("result1").innerHTML === "정답입니다!" && document.getElementById("result2").innerHTML === "정답입니다!"&& document.getElementById("result3").innerHTML === "정답입니다!") {
-          // 모든 문제의 정답을 맞췄으면 "다음 페이지로 이동합니다." 메시지를 표시하고, 페이지를 이동합니다.
+          // 모든 문제의 정답을 맞췄으면  메시지를 표시
           alert("◆=2")
         }
       }
